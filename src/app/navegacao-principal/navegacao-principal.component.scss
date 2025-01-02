@@ -1,0 +1,53 @@
+/* Estilo para o menu lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0; /* Fixado à direita */
+    width: 250px; /* Largura do menu lateral */
+    height: 100%;
+    background-color: #2c3e50;
+    padding-top: 100px; /* Distância do topo para o conteúdo do menu */
+    color: white;
+    font-family: Arial, sans-serif;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra suave do lado esquerdo */
+    transition: all 0.3s ease; /* Transições suaves */
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 20px 0;
+  }
+  
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center; /* Centralizar ícones e texto */
+    padding: 12px 15px;
+    background-color: #34495e;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .sidebar ul li a:hover {
+    background-color: #16a085;
+    transform: translateX(10px); /* Leve efeito de movimentação ao passar o mouse */
+  }
+  
+  .menu-item {
+    font-size: 16px;
+    padding-left: 10px; /* Espaçamento entre o ícone e o texto */
+  }
+  
+  /* Ícones de menu (exemplo para adicionar ícones com FontAwesome ou outro) */
+  .sidebar ul li a .menu-item::before {
+    content: "\f007"; /* Ícone de usuário como exemplo */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+  }
+  

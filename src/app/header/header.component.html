@@ -1,0 +1,38 @@
+<header>
+    <div class="header-container">
+      <div class="user-info">
+        <!-- Foto do usuário -->
+        <div class="user-photo">
+          <img src="foto_do_usuario.jpg" alt="Foto do Usuário" (mouseenter)="showProfileBox=true" (mouseleave)="showProfileBox=false">
+          
+          <!-- Caixa Flutuante -->
+          <div class="profile-box" *ngIf="showProfileBox">
+            <div class="profile-content">
+              <!-- Nome do usuário -->
+              <div class="profile-name">
+                <strong>Nome do Usuário</strong>
+              </div>
+              <!-- E-mail do usuário -->
+              <div class="profile-email">
+                <span>email/dominio.com</span>
+              </div>
+              <!-- Caixinha de mensagem -->
+              <div class="profile-alerts">
+                <textarea placeholder="Mensagem de alerta..."></textarea>
+              </div>
+              <!-- Editar Perfil -->
+              <div class="edit-profile">
+                <button>Edit Profile</button>
+              </div>
+            </div>
+          </div>
+        </div>        
+        
+        <!-- Sair -->
+        <div class="logout">
+          <button>Logout</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  

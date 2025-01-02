@@ -1,0 +1,9 @@
+<form [formGroup]="formularioSolicitacao" (ngSubmit)="solicitarAcesso()">
+    <input formControlName="nome" placeholder="Nome" />
+    <input formControlName="sobrenome" placeholder="Sobrenome" />
+    <input formControlName="email" placeholder="Email" />
+    <input formControlName="senha" placeholder="Senha" type="password" />
+    <textarea formControlName="motivo" placeholder="Motivo"></textarea>
+    <input formControlName="perfil_solicitado" placeholder="Perfil Solicitado" />
+    <button type="submit">Solicitar</button>
+</form>

@@ -1,0 +1,89 @@
+
+.painel-monitor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+  
+    .equipamento-caixa {
+      position: relative;
+      width: 200px;
+      padding: 12px;
+      border-radius: 8px;
+      background-color: #1e1e2f;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  
+        .tooltip {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+  
+      &.status-ok .status-indicador {
+        background: #0efb92;
+        box-shadow: 0 0 8px #0efb92;
+      }
+  
+      &.status-falha .status-indicador {
+        background: #ff4c4c;
+        box-shadow: 0 0 8px #ff4c4c;
+      }
+  
+      .equipamento-detalhes {
+        h3 {
+          margin: 0;
+          font-size: 1.2rem;
+          color: #ffffff;
+        }
+        p {
+          margin: 4px 0;
+          color: #c0c0c0;
+        }
+      }
+  
+      .status-indicador {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        margin-top: 12px;
+      }
+  
+      .tooltip {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 240px;
+        padding: 8px;
+        background: #2d2d3c;
+        color: #fff;
+        border-radius: 4px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease, visibility 0.2s ease;
+  
+        h4 {
+          margin: 8px 0 4px;
+          font-size: 1rem;
+          color: #ffffff;
+        }
+  
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+  
+          li {
+            font-size: 0.875rem;
+            color: #b0b0b0;
+          }
+        }
+      }
+    }
+  }
+  

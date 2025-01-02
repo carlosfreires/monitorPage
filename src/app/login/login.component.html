@@ -1,0 +1,14 @@
+<div *ngIf="exibirLogin; else telaSolicitacao">
+    <form [formGroup]="formularioLogin" (ngSubmit)="realizarLogin()">
+      <input formControlName="email" placeholder="Email" />
+      <input formControlName="senha" placeholder="Senha" type="password" />
+      <button type="submit">Entrar</button>
+      <button type="button" (click)="alternarTela()">Solicitar Acesso</button>
+    </form>
+  </div>
+  
+  <ng-template #telaSolicitacao>
+    <app-solicitar-acesso></app-solicitar-acesso>
+    <button type="button" (click)="alternarTela()">Voltar ao Login</button>
+  </ng-template>
+

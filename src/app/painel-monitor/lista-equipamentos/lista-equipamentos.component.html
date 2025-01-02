@@ -1,0 +1,28 @@
+<section class="PainelMonitor" >
+    <h2>Lista de Equipamentos</h2>
+  
+    <!-- Mensagem de erro -->
+    <div *ngIf="errorMessage" class="error">
+      {{ errorMessage }}
+    </div>
+  
+    <!-- Lista de equipamentos -->
+    <ul *ngIf="equipamentos.length > 0; else semEquipamentos">
+      <li *ngFor="let equipamento of equipamentos">
+        <strong>Nome:</strong> {{ equipamento.nome }}<br />
+        <strong>Descrição:</strong> {{ equipamento.descricao }}<br />
+        <strong>MAC:</strong> {{ equipamento.mac }}<br />
+        <strong>IP:</strong> {{ equipamento.ip }}<br />
+        <strong>Porta:</strong> {{ equipamento.porta }}<br />
+        <strong>Tipo de Teste:</strong> {{ equipamento.tipo_teste }}<br />
+        <hr />
+      </li>
+    </ul>
+  
+    <!-- Caso não haja equipamentos -->
+    <ng-template #semEquipamentos>
+      <p>Não há equipamentos cadastrados no momento.</p>
+    </ng-template>
+  </section>
+  
+  

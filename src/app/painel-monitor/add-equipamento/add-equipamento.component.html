@@ -1,0 +1,30 @@
+<section>
+    <h2>Adicionar Equipamento</h2>
+    <form (ngSubmit)="onSubmit()">
+      <label for="nome">Nome</label>
+      <input id="nome" type="text" [(ngModel)]="equipamento.nome" name="nome" required />
+      <br />
+  
+      <label for="descricao">Descrição</label>
+      <input id="descricao" type="text" [(ngModel)]="equipamento.descricao" name="descricao" required />
+      <br />
+  
+      <label for="mac">MAC</label>
+      <input id="mac" type="text" [(ngModel)]="equipamento.mac" name="mac" required />
+      <br />
+  
+      <label for="ip">IP</label>
+      <input id="ip" type="text" [(ngModel)]="equipamento.ip" name="ip" required />
+      <br />
+  
+      <label for="porta">Porta</label>
+      <input id="porta" type="number" [(ngModel)]="equipamento.porta" name="porta" required />
+      <br />
+  
+      <label for="tipo_teste">Tipo de Teste</label>
+      <input id="tipo_teste" type="text" [(ngModel)]="equipamento.tipo_teste" name="tipo_teste" required />
+      <br />
+  
+      <button type="submit">Cadastrar Novo Equipamento</button>
+    </form>
+  </section>

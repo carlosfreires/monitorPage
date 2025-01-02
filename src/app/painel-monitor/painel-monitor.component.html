@@ -1,0 +1,34 @@
+<app-header></app-header>
+<app-navegacao-principal></app-navegacao-principal>
+
+<div class="painel-monitor">
+    <div
+      *ngFor="let equipamento of equipamentos"
+      class="equipamento-caixa"
+      [ngClass]="{
+        'status-ok': !equipamento.falha,
+        'status-falha': equipamento.falha
+      }"
+      (mouseenter)="carregarLogs()"
+    >
+      <div class="equipamento-detalhes">
+        <h3>{{ equipamento.nome }}</h3>
+        <p>{{ equipamento.ip }}</p>
+      </div>
+      <div class="status-indicador"></div>
+      <div class="tooltip">
+        <p>IP: {{ equipamento.ip }}</p>
+        <p>Porta: {{ equipamento.porta }}</p>
+        <p>Descrição: {{ equipamento.descricao }}</p>
+        <h4>Últimos Logs:</h4>
+        <ul>
+          <li *ngFor="let log of logs[equipamento.equipamentoId]">
+            {{ log.created_at }} - {{ log.status_ping }} / {{ log.status_telnet }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  
+  
